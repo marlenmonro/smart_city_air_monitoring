@@ -1,0 +1,92 @@
+[
+  {
+    "id": "A001",
+    "name": "Abay Ave – Stop 1",
+    "lat": 43.25,
+    "lon": 76.92,
+    "pm25": 8.2,
+    "last_seen": "2025-01-15T10:35:00Z",
+    "status": "online"
+  },
+  {
+    "id": "A002",
+    "name": "Republic Square",
+    "lat": 43.238949,
+    "lon": 76.889709,
+    "pm25": 15.7,
+    "last_seen": "2025-01-15T10:32:00Z",
+    "status": "online"
+  },
+  {
+    "id": "A003",
+    "name": "Al-Farabi Ave",
+    "lat": 43.22,
+    "lon": 76.85,
+    "pm25": 28.4,
+    "last_seen": "2025-01-15T10:30:00Z",
+    "status": "online"
+  },
+  {
+    "id": "A004",
+    "name": "Medeu District",
+    "lat": 43.15,
+    "lon": 76.95,
+    "pm25": 45.2,
+    "last_seen": "2025-01-15T10:28:00Z",
+    "status": "online"
+  },
+  {
+    "id": "A005",
+    "name": "Zhibek Zholy",
+    "lat": 43.28,
+    "lon": 76.88,
+    "pm25": 62.1,
+    "last_seen": "2025-01-15T10:25:00Z",
+    "status": "online"
+  },
+  {
+    "id": "A006",
+    "name": "Raiymbek Ave",
+    "lat": 43.20,
+    "lon": 76.82,
+    "pm25": 78.9,
+    "last_seen": "2025-01-15T10:22:00Z",
+    "status": "online"
+  },
+  {
+    "id": "A007",
+    "name": "Satpayev St",
+    "lat": 43.26,
+    "lon": 76.85,
+    "pm25": 95.3,
+    "last_seen": "2025-01-15T10:20:00Z",
+    "status": "online"
+  },
+  {
+    "id": "A008",
+    "name": "Kazakhstan Ave",
+    "lat": 43.24,
+    "lon": 76.92,
+    "pm25": 125.7,
+    "last_seen": "2025-01-15T10:18:00Z",
+    "status": "online"
+  },
+  {
+    "id": "A009",
+    "name": "Tole Bi St",
+    "lat": 43.18,
+    "lon": 76.90,
+    "pm25": 180.2,
+    "last_seen": "2025-01-15T10:15:00Z",
+    "status": "online"
+  },
+  {
+    "id": "A010",
+    "name": "Dostyk Ave",
+    "lat": 43.30,
+    "lon": 76.95,
+    "pm25": 275.8,
+    "last_seen": "2025-01-15T10:12:00Z",
+    "status": "online"
+  }
+]

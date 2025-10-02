@@ -1,0 +1,34 @@
+[
+  {
+    "sku": "AQ-100",
+    "name": "AirSense Home",
+    "short": "PM2.5/PM10/Temp/Humidity",
+    "price_usd": 89,
+    "features": ["PM2.5", "Wi-Fi", "Mobile App"],
+    "image": null
+  },
+  {
+    "sku": "AQ-200",
+    "name": "AirPro Office",
+    "short": "PM2.5/PM10/CO2/Temp/Humidity",
+    "price_usd": 149,
+    "features": ["PM2.5", "PM10", "CO2", "Wi-Fi", "Dashboard"],
+    "image": null
+  },
+  {
+    "sku": "AQ-300",
+    "name": "AirMax Industrial",
+    "short": "PM2.5/PM10/CO2/NO2/SO2/Temp/Humidity",
+    "price_usd": 299,
+    "features": ["PM2.5", "PM10", "CO2", "NO2", "SO2", "Wi-Fi", "API"],
+    "image": null
+  },
+  {
+    "sku": "AQ-400",
+    "name": "AirGuard Portable",
+    "short": "PM2.5/Temp/Humidity/Battery",
+    "price_usd": 199,
+    "features": ["PM2.5", "Bluetooth", "Mobile App", "Battery"],
+    "image": null
+  }
+]
