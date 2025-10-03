@@ -1,0 +1,34 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Floor -->
+  <polygon points="0,240 400,240 400,300 0,300" fill="#e2e8f0"/>
+  
+  <!-- Back Wall -->
+  <polygon points="0,0 400,0 400,240 0,240" fill="#f1f5f9"/>
+  
+  <!-- Left Wall -->
+  <polygon points="0,0 200,0 200,300 0,300" fill="#e2e8f0"/>
+  
+  <!-- Living Room Furniture -->
+  <!-- Sofa -->
+  <rect x="60" y="200" width="80" height="30" fill="#8b5cf6" rx="4"/>
+  <!-- Chair -->
+  <rect x="260" y="205" width="60" height="25" fill="#f59e0b" rx="4"/>
+  <!-- TV -->
+  <rect x="80" y="160" width="40" height="25" fill="#111827" rx="2"/>
+  <!-- Plant -->
+  <ellipse cx="30" cy="190" rx="15" ry="20" fill="#10b981"/>
+  
+  <!-- Air Quality Sensor -->
+  <circle cx="320" cy="80" r="20" fill="#10b981" stroke="white" stroke-width="3"/>
+  <circle cx="320" cy="80" r="8" fill="white"/>
+  <circle cx="320" cy="80" r="3" fill="#10b981"/>
+  
+  <!-- Door -->
+  <rect x="20" y="180" width="30" height="80" fill="#92400e" rx="2"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#111827">Home Environment</text>
+</svg>

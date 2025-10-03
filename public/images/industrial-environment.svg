@@ -1,0 +1,48 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8fafc"/>
+  
+  <!-- Floor -->
+  <polygon points="0,240 400,240 400,300 0,300" fill="#e2e8f0"/>
+  
+  <!-- Back Wall -->
+  <polygon points="0,0 400,0 400,240 0,240" fill="#f1f5f9"/>
+  
+  <!-- Left Wall -->
+  <polygon points="0,0 200,0 200,300 0,300" fill="#e2e8f0"/>
+  
+  <!-- Industrial Equipment -->
+  <!-- Machine 1 -->
+  <rect x="40" y="200" width="60" height="40" fill="#6b7280" rx="4"/>
+  <rect x="45" y="205" width="50" height="30" fill="#9ca3af" rx="2"/>
+  
+  <!-- Machine 2 -->
+  <rect x="290" y="205" width="50" height="35" fill="#374151" rx="4"/>
+  <rect x="295" y="210" width="40" height="25" fill="#4b5563" rx="2"/>
+  
+  <!-- Pipes -->
+  <rect x="100" y="180" width="80" height="8" fill="#9ca3af" rx="4" transform="rotate(15 140 184)"/>
+  <rect x="120" y="200" width="60" height="6" fill="#9ca3af" rx="3" transform="rotate(-10 150 203)"/>
+  
+  <!-- Warning Sign -->
+  <circle cx="30" cy="120" r="15" fill="#ef4444"/>
+  <text x="30" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">!</text>
+  
+  <!-- Control Panel -->
+  <rect x="200" y="150" width="80" height="60" fill="#1f2937" rx="4"/>
+  <rect x="210" y="160" width="60" height="40" fill="#374151" rx="2"/>
+  <circle cx="220" cy="175" r="3" fill="#10b981"/>
+  <circle cx="235" cy="175" r="3" fill="#f59e0b"/>
+  <circle cx="250" cy="175" r="3" fill="#ef4444"/>
+  
+  <!-- Air Quality Sensor -->
+  <circle cx="320" cy="80" r="20" fill="#10b981" stroke="white" stroke-width="3"/>
+  <circle cx="320" cy="80" r="8" fill="white"/>
+  <circle cx="320" cy="80" r="3" fill="#10b981"/>
+  
+  <!-- Door -->
+  <rect x="20" y="180" width="30" height="80" fill="#92400e" rx="2"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#111827">Industrial Environment</text>
+</svg>
