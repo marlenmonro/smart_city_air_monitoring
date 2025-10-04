@@ -90,29 +90,62 @@ const HomePage: React.FC = () => {
             margin: '0 auto'
           }}>
             <Link to="/products" style={{
-              backgroundColor: '#111827',
+              background: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
               color: 'white',
-              padding: 'clamp(10px, 2vw, 12px) clamp(20px, 4vw, 24px)',
-              borderRadius: '8px',
+              padding: 'clamp(12px, 2.5vw, 16px) clamp(24px, 4vw, 32px)',
+              borderRadius: '12px',
               textDecoration: 'none',
               fontSize: 'clamp(14px, 2.5vw, 16px)',
               fontWeight: '600',
               display: 'inline-block',
-              transition: 'all 0.2s',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
               width: '100%',
-              textAlign: 'center'
+              textAlign: 'center',
+              boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.25)',
+              transform: 'translateY(0)',
+              position: 'relative',
+              overflow: 'hidden'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.35)';
+              e.currentTarget.style.background = 'linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.25)';
+              e.currentTarget.style.background = 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)';
             }}>
               {t('hero.cta')}
             </Link>
             
             <Link to="/guide" style={{
-              color: '#6b7280',
+              color: '#1e40af',
               textDecoration: 'none',
               fontSize: 'clamp(14px, 2.5vw, 16px)',
-              fontWeight: '500',
-              padding: '12px 0',
-              borderBottom: '1px solid transparent',
-              transition: 'all 0.2s'
+              fontWeight: '600',
+              padding: 'clamp(12px, 2.5vw, 16px) clamp(24px, 4vw, 32px)',
+              border: '2px solid #1e40af',
+              borderRadius: '12px',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.1)',
+              transform: 'translateY(0)',
+              display: 'inline-block',
+              width: '100%',
+              textAlign: 'center',
+              backgroundColor: 'transparent'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.2)';
+              e.currentTarget.style.backgroundColor = '#1e40af';
+              e.currentTarget.style.color = 'white';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.1)';
+              e.currentTarget.style.backgroundColor = 'transparent';
+              e.currentTarget.style.color = '#1e40af';
             }}>
               {t('hero.learnMore')}
             </Link>
@@ -129,28 +162,39 @@ const HomePage: React.FC = () => {
           <div style={{
             width: 'clamp(250px, 50vw, 400px)',
             height: 'clamp(250px, 50vw, 400px)',
-            backgroundColor: 'white',
-            borderRadius: '16px',
-            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+            background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
+            borderRadius: '20px',
+            boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 20px 20px -10px rgba(0, 0, 0, 0.1)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             position: 'relative',
             transform: 'perspective(1000px) rotateY(-5deg) rotateX(5deg)',
-            border: '1px solid #e5e7eb'
+            border: '1px solid rgba(226, 232, 240, 0.5)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            overflow: 'hidden'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'perspective(1000px) rotateY(-2deg) rotateX(2deg) scale(1.02)';
+            e.currentTarget.style.boxShadow = '0 32px 64px -12px rgba(0, 0, 0, 0.2), 0 25px 25px -10px rgba(0, 0, 0, 0.15)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'perspective(1000px) rotateY(-5deg) rotateX(5deg) scale(1)';
+            e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 20px 20px -10px rgba(0, 0, 0, 0.1)';
           }}>
             {/* Air Quality Sensor Device */}
             <div style={{
               width: '280px',
               height: '280px',
-              backgroundColor: '#f8fafc',
-              borderRadius: '12px',
-              border: '2px solid #e2e8f0',
+              background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
+              borderRadius: '16px',
+              border: '2px solid rgba(226, 232, 240, 0.8)',
               position: 'relative',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              boxShadow: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)'
             }}>
               {/* Sensor Holes */}
               <div style={{
@@ -542,14 +586,22 @@ const HomePage: React.FC = () => {
             <div style={{
               width: 'clamp(300px, 80vw, 600px)',
               height: 'clamp(225px, 60vw, 450px)',
-              borderRadius: '16px',
-              boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
-              border: '1px solid #e5e7eb',
+              borderRadius: '20px',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 20px 20px -10px rgba(0, 0, 0, 0.1)',
+              border: '1px solid rgba(226, 232, 240, 0.5)',
               position: 'relative',
               overflow: 'hidden',
               backgroundColor: 'transparent',
               transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
               transform: 'translateY(0)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.boxShadow = '0 32px 64px -12px rgba(0, 0, 0, 0.2), 0 25px 25px -10px rgba(0, 0, 0, 0.15)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 20px 20px -10px rgba(0, 0, 0, 0.1)';
             }}>
               {/* Dynamic Environment Image based on selected sensor */}
               <div style={{
@@ -675,34 +727,41 @@ const HomePage: React.FC = () => {
             
             {/* Sensor Models */}
             <div style={{
-              border: '1px solid #e5e7eb',
-              borderRadius: '12px',
+              border: '1px solid rgba(226, 232, 240, 0.5)',
+              borderRadius: '16px',
               overflow: 'hidden',
-              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-              transition: 'all 0.3s ease'
+              boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              backgroundColor: 'white'
             }}>
               {/* AirSense Home - Expanded */}
               <div 
                 style={{
                   padding: '1.5rem',
-                  backgroundColor: expandedSensor === 'AirSense Home' ? 'white' : '#f9fafb',
-                  borderBottom: '1px solid #e5e7eb',
+                  background: expandedSensor === 'AirSense Home' 
+                    ? 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)' 
+                    : 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)',
+                  borderBottom: '1px solid rgba(229, 231, 235, 0.5)',
                   cursor: 'pointer',
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   transform: expandedSensor === 'AirSense Home' ? 'scale(1.02)' : 'scale(1)',
-                  boxShadow: expandedSensor === 'AirSense Home' ? '0 8px 25px -5px rgba(0, 0, 0, 0.1)' : 'none'
+                  boxShadow: expandedSensor === 'AirSense Home' 
+                    ? '0 10px 25px -5px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)' 
+                    : 'none'
                 }}
                 onClick={() => setExpandedSensor('AirSense Home')}
                 onMouseEnter={(e) => {
                   if (expandedSensor !== 'AirSense Home') {
-                    e.currentTarget.style.backgroundColor = '#f3f4f6';
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)';
                     e.currentTarget.style.transform = 'scale(1.01)';
+                    e.currentTarget.style.boxShadow = '0 4px 12px -2px rgba(0, 0, 0, 0.1)';
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (expandedSensor !== 'AirSense Home') {
-                    e.currentTarget.style.backgroundColor = '#f9fafb';
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)';
                     e.currentTarget.style.transform = 'scale(1)';
+                    e.currentTarget.style.boxShadow = 'none';
                   }
                 }}
               >
@@ -1550,22 +1609,54 @@ const HomePage: React.FC = () => {
                   justifyContent: 'flex-end'
                 }}>
                   <button style={{
-                    padding: '0.5rem 1rem',
-                    backgroundColor: 'transparent',
-                    border: '1px solid #d1d5db',
-                    borderRadius: '4px',
-                    fontSize: '12px',
-                    color: '#6b7280'
+                    padding: '0.75rem 1.5rem',
+                    background: 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)',
+                    border: '1px solid rgba(209, 213, 219, 0.5)',
+                    borderRadius: '8px',
+                    fontSize: '14px',
+                    fontWeight: '500',
+                    color: '#6b7280',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    boxShadow: '0 2px 4px -1px rgba(0, 0, 0, 0.1)',
+                    transform: 'translateY(0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-1px)';
+                    e.currentTarget.style.boxShadow = '0 4px 8px -2px rgba(0, 0, 0, 0.15)';
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)';
+                    e.currentTarget.style.color = '#374151';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 2px 4px -1px rgba(0, 0, 0, 0.1)';
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)';
+                    e.currentTarget.style.color = '#6b7280';
                   }}>
                     {t('smartAlerts.cancel')}
                   </button>
                   <button style={{
-                    padding: '0.5rem 1rem',
-                    backgroundColor: '#111827',
+                    padding: '0.75rem 1.5rem',
+                    background: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
                     border: 'none',
-                    borderRadius: '4px',
-                    fontSize: '12px',
-                    color: 'white'
+                    borderRadius: '8px',
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: 'white',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.25)',
+                    transform: 'translateY(0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.35)';
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.25)';
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)';
                   }}>
                     {t('smartAlerts.save')}
                   </button>
@@ -1872,22 +1963,54 @@ const HomePage: React.FC = () => {
                   justifyContent: 'space-between'
                 }}>
                   <button style={{
-                    padding: '0.75rem 1rem',
-                    backgroundColor: 'transparent',
-                    border: '1px solid #d1d5db',
-                    borderRadius: '6px',
+                    padding: '0.75rem 1.5rem',
+                    background: 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)',
+                    border: '1px solid rgba(209, 213, 219, 0.5)',
+                    borderRadius: '8px',
                     fontSize: '14px',
-                    color: '#6b7280'
+                    fontWeight: '500',
+                    color: '#6b7280',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    boxShadow: '0 2px 4px -1px rgba(0, 0, 0, 0.1)',
+                    transform: 'translateY(0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-1px)';
+                    e.currentTarget.style.boxShadow = '0 4px 8px -2px rgba(0, 0, 0, 0.15)';
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)';
+                    e.currentTarget.style.color = '#374151';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 2px 4px -1px rgba(0, 0, 0, 0.1)';
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)';
+                    e.currentTarget.style.color = '#6b7280';
                   }}>
                     {t('easySetup.back')}
                   </button>
                   <button style={{
-                    padding: '0.75rem 1rem',
-                    backgroundColor: '#1e40af',
+                    padding: '0.75rem 1.5rem',
+                    background: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
                     border: 'none',
-                    borderRadius: '6px',
+                    borderRadius: '8px',
                     fontSize: '14px',
-                    color: 'white'
+                    fontWeight: '600',
+                    color: 'white',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.25)',
+                    transform: 'translateY(0)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.35)';
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.25)';
+                    e.currentTarget.style.background = 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)';
                   }}>
                     {t('easySetup.continue')}
                   </button>
@@ -2097,29 +2220,55 @@ const HomePage: React.FC = () => {
               flexWrap: 'wrap'
             }}>
               <Link to="/guide" style={{
-                padding: '12px 24px',
-                backgroundColor: '#1e40af',
+                padding: '1rem 2rem',
+                background: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
                 color: 'white',
                 textDecoration: 'none',
-                borderRadius: '8px',
+                borderRadius: '12px',
                 fontSize: '16px',
-                fontWeight: '500',
-                transition: 'all 0.2s',
-                display: 'inline-block'
+                fontWeight: '600',
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                display: 'inline-block',
+                boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.25)',
+                transform: 'translateY(0)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.35)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.25)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)';
               }}>
                 {t('support.viewSetupGuide')}
               </Link>
               <a href="mailto:support@airquality.com" style={{
-                padding: '12px 24px',
-                backgroundColor: 'transparent',
+                padding: '1rem 2rem',
+                background: 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)',
                 color: '#1e40af',
                 textDecoration: 'none',
-                borderRadius: '8px',
+                borderRadius: '12px',
                 fontSize: '16px',
-                fontWeight: '500',
-                border: '1px solid #1e40af',
-                transition: 'all 0.2s',
-                display: 'inline-block'
+                fontWeight: '600',
+                border: '2px solid #1e40af',
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                display: 'inline-block',
+                boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.1)',
+                transform: 'translateY(0)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.2)';
+                e.currentTarget.style.backgroundColor = '#1e40af';
+                e.currentTarget.style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.1)';
+                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.color = '#1e40af';
               }}>
                 {t('support.contactSupport')}
               </a>

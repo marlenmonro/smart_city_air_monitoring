@@ -102,25 +102,51 @@ const Navigation: React.FC = () => {
           fontSize: '14px',
           fontWeight: '500',
           color: '#6b7280',
-          backgroundColor: 'transparent',
-          border: '1px solid #d1d5db',
-          borderRadius: '6px',
-          padding: '8px 16px',
+          background: 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)',
+          border: '1px solid rgba(209, 213, 219, 0.5)',
+          borderRadius: '8px',
+          padding: '10px 18px',
           cursor: 'pointer',
-          transition: 'all 0.2s'
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          boxShadow: '0 2px 4px -1px rgba(0, 0, 0, 0.1)',
+          transform: 'translateY(0)'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'translateY(-1px)';
+          e.currentTarget.style.boxShadow = '0 4px 8px -2px rgba(0, 0, 0, 0.15)';
+          e.currentTarget.style.background = 'linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)';
+          e.currentTarget.style.color = '#374151';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = '0 2px 4px -1px rgba(0, 0, 0, 0.1)';
+          e.currentTarget.style.background = 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)';
+          e.currentTarget.style.color = '#6b7280';
         }}>
           {t('navigation.login')}
         </button>
         <button style={{
           fontSize: '14px',
-          fontWeight: '500',
+          fontWeight: '600',
           color: 'white',
-          backgroundColor: '#111827',
+          background: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
           border: 'none',
-          borderRadius: '6px',
-          padding: '8px 16px',
+          borderRadius: '8px',
+          padding: '10px 18px',
           cursor: 'pointer',
-          transition: 'all 0.2s'
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.25)',
+          transform: 'translateY(0)'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'translateY(-2px)';
+          e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.35)';
+          e.currentTarget.style.background = 'linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.25)';
+          e.currentTarget.style.background = 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)';
         }}>
           {t('navigation.getDemo')}
         </button>
@@ -891,15 +917,27 @@ const ProductsPage: React.FC = () => {
                     </div>
                     
                     <button style={{
-                      backgroundColor: '#1e40af',
+                      background: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
                       color: 'white',
                       border: 'none',
-                      borderRadius: '8px',
-                      padding: '0.75rem 1.5rem',
+                      borderRadius: '10px',
+                      padding: '0.875rem 1.75rem',
                       fontSize: '14px',
-                      fontWeight: '500',
+                      fontWeight: '600',
                       cursor: 'pointer',
-                      transition: 'background-color 0.2s'
+                      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                      boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.25)',
+                      transform: 'translateY(0)'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-2px)';
+                      e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.35)';
+                      e.currentTarget.style.background = 'linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.25)';
+                      e.currentTarget.style.background = 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)';
                     }}>
                       {t('pages.products.learnMore')}
                     </button>
@@ -1113,32 +1151,113 @@ const NotFoundPage: React.FC = () => {
       <p style={{ fontSize: '1.1rem', color: '#6b7280', marginBottom: '2rem' }}>
         {t('pages.notFound.description')}
       </p>
-      <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+      <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
         <Link to="/" style={{
-          color: '#2563eb',
-          textDecoration: 'underline',
-          fontSize: '1rem'
+          background: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
+          color: 'white',
+          textDecoration: 'none',
+          borderRadius: '10px',
+          padding: '0.75rem 1.5rem',
+          fontSize: '1rem',
+          fontWeight: '600',
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.25)',
+          transform: 'translateY(0)',
+          display: 'inline-block'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'translateY(-2px)';
+          e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.35)';
+          e.currentTarget.style.background = 'linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.25)';
+          e.currentTarget.style.background = 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)';
         }}>
           {t('pages.notFound.links.goToHome')}
         </Link>
         <Link to="/map" style={{
-          color: '#2563eb',
-          textDecoration: 'underline',
-          fontSize: '1rem'
+          background: 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)',
+          color: '#1e40af',
+          textDecoration: 'none',
+          borderRadius: '10px',
+          padding: '0.75rem 1.5rem',
+          fontSize: '1rem',
+          fontWeight: '600',
+          border: '2px solid #1e40af',
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.1)',
+          transform: 'translateY(0)',
+          display: 'inline-block'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'translateY(-2px)';
+          e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.2)';
+          e.currentTarget.style.backgroundColor = '#1e40af';
+          e.currentTarget.style.color = 'white';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.1)';
+          e.currentTarget.style.backgroundColor = 'transparent';
+          e.currentTarget.style.color = '#1e40af';
         }}>
           {t('pages.notFound.links.goToMap')}
         </Link>
         <Link to="/products" style={{
-          color: '#2563eb',
-          textDecoration: 'underline',
-          fontSize: '1rem'
+          background: 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)',
+          color: '#1e40af',
+          textDecoration: 'none',
+          borderRadius: '10px',
+          padding: '0.75rem 1.5rem',
+          fontSize: '1rem',
+          fontWeight: '600',
+          border: '2px solid #1e40af',
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.1)',
+          transform: 'translateY(0)',
+          display: 'inline-block'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'translateY(-2px)';
+          e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.2)';
+          e.currentTarget.style.backgroundColor = '#1e40af';
+          e.currentTarget.style.color = 'white';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.1)';
+          e.currentTarget.style.backgroundColor = 'transparent';
+          e.currentTarget.style.color = '#1e40af';
         }}>
           {t('pages.notFound.links.goToProducts')}
         </Link>
         <Link to="/guide" style={{
-          color: '#2563eb',
-          textDecoration: 'underline',
-          fontSize: '1rem'
+          background: 'linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)',
+          color: '#1e40af',
+          textDecoration: 'none',
+          borderRadius: '10px',
+          padding: '0.75rem 1.5rem',
+          fontSize: '1rem',
+          fontWeight: '600',
+          border: '2px solid #1e40af',
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.1)',
+          transform: 'translateY(0)',
+          display: 'inline-block'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = 'translateY(-2px)';
+          e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.2)';
+          e.currentTarget.style.backgroundColor = '#1e40af';
+          e.currentTarget.style.color = 'white';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.1)';
+          e.currentTarget.style.backgroundColor = 'transparent';
+          e.currentTarget.style.color = '#1e40af';
         }}>
           {t('pages.notFound.links.goToGuide')}
         </Link>
