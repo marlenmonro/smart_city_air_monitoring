@@ -6,10 +6,14 @@ import Map from './components/Map';
 import { ProductCard } from './components/ProductCardInline';
 import { useProducts } from './hooks/useData';
 import ScrollToTop from './components/ScrollToTop';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import './i18n';
+import { useTranslation } from 'react-i18next';
 
 // Navigation Component
 const Navigation: React.FC = () => {
   const location = useLocation();
+  const { t } = useTranslation();
 
   const isActive = (path: string) => {
     return location.pathname === path;
@@ -39,7 +43,7 @@ const Navigation: React.FC = () => {
           <span style={{ color: 'white', fontWeight: 'bold', fontSize: '14px' }}>AQ</span>
         </div>
         <span style={{ fontSize: '1.25rem', fontWeight: '600', color: '#111827' }}>
-          AirQuality
+          {t('navigation.brand')}
         </span>
       </Link>
       
@@ -54,7 +58,7 @@ const Navigation: React.FC = () => {
           borderBottom: isActive('/') ? '2px solid #1e40af' : '2px solid transparent',
           transition: 'all 0.2s'
         }}>
-          Home
+          {t('navigation.home')}
         </Link>
         <Link to="/map" style={{
           fontSize: '14px',
@@ -65,7 +69,7 @@ const Navigation: React.FC = () => {
           borderBottom: isActive('/map') ? '2px solid #1e40af' : '2px solid transparent',
           transition: 'all 0.2s'
         }}>
-          Map
+          {t('navigation.map')}
         </Link>
         <Link to="/products" style={{
           fontSize: '14px',
@@ -76,7 +80,7 @@ const Navigation: React.FC = () => {
           borderBottom: isActive('/products') ? '2px solid #1e40af' : '2px solid transparent',
           transition: 'all 0.2s'
         }}>
-          Products
+          {t('navigation.products')}
         </Link>
         <Link to="/guide" style={{
           fontSize: '14px',
@@ -87,12 +91,13 @@ const Navigation: React.FC = () => {
           borderBottom: isActive('/guide') ? '2px solid #1e40af' : '2px solid transparent',
           transition: 'all 0.2s'
         }}>
-          Setup Guide
+          {t('navigation.setupGuide')}
         </Link>
       </div>
 
       {/* Right - Action Buttons */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <LanguageSwitcher />
         <button style={{
           fontSize: '14px',
           fontWeight: '500',
@@ -104,7 +109,7 @@ const Navigation: React.FC = () => {
           cursor: 'pointer',
           transition: 'all 0.2s'
         }}>
-          Log in
+          {t('navigation.login')}
         </button>
         <button style={{
           fontSize: '14px',
@@ -117,7 +122,7 @@ const Navigation: React.FC = () => {
           cursor: 'pointer',
           transition: 'all 0.2s'
         }}>
-          Get Demo
+          {t('navigation.getDemo')}
         </button>
       </div>
     </nav>
@@ -126,6 +131,8 @@ const Navigation: React.FC = () => {
 
 // Footer Component
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer style={{
       backgroundColor: 'white',
@@ -177,8 +184,8 @@ const Footer: React.FC = () => {
               lineHeight: '1.5',
               margin: '0 0 1rem 0'
             }}>
-              Professional air quality monitoring solutions for homes, offices, and industrial spaces.
-            </p>
+              {t('footer.companyDescription')}
+              </p>
           </div>
           
           {/* Products */}
@@ -189,7 +196,7 @@ const Footer: React.FC = () => {
               color: '#111827',
               margin: '0 0 1rem 0'
             }}>
-              Products
+              {t('footer.products')}
             </h4>
             <ul style={{
               listStyle: 'none',
@@ -197,11 +204,11 @@ const Footer: React.FC = () => {
               margin: '0'
             }}>
               {[
-                'AirSense Home',
-                'AirPro Office', 
-                'AirMax Industrial',
-                'AirGuard Portable',
-                'All Products'
+                t('footer.airSenseHome'),
+                t('footer.airProOffice'), 
+                t('footer.airMaxIndustrial'),
+                t('footer.airGuardPortable'),
+                t('footer.allProducts')
               ].map((item) => (
                 <li key={item} style={{ marginBottom: '0.5rem' }}>
                   <Link to="/products" style={{
@@ -225,7 +232,7 @@ const Footer: React.FC = () => {
               color: '#111827',
               margin: '0 0 1rem 0'
             }}>
-              Support
+              {t('footer.support')}
             </h4>
             <ul style={{
               listStyle: 'none',
@@ -233,11 +240,11 @@ const Footer: React.FC = () => {
               margin: '0'
             }}>
               {[
-                'Setup Guide',
-                'Documentation',
-                'API Reference',
-                'Contact Support',
-                'System Status'
+                t('footer.setupGuide'),
+                t('footer.documentation'),
+                t('footer.apiReference'),
+                t('footer.supportContact'),
+                t('footer.systemStatus')
               ].map((item) => (
                 <li key={item} style={{ marginBottom: '0.5rem' }}>
                   <Link to="/guide" style={{
@@ -261,7 +268,7 @@ const Footer: React.FC = () => {
               color: '#111827',
               margin: '0 0 1rem 0'
             }}>
-              Company
+              {t('footer.company')}
             </h4>
             <ul style={{
               listStyle: 'none',
@@ -269,11 +276,11 @@ const Footer: React.FC = () => {
               margin: '0'
             }}>
               {[
-                'About Us',
-                'Careers',
-                'Privacy Policy',
-                'Terms of Service',
-                'Contact'
+                t('footer.aboutUs'),
+                t('footer.careers'),
+                t('footer.privacyPolicy'),
+                t('footer.termsOfService'),
+                t('footer.contact')
               ].map((item) => (
                 <li key={item} style={{ marginBottom: '0.5rem' }}>
                   <a href="#" style={{
@@ -297,7 +304,7 @@ const Footer: React.FC = () => {
               color: '#111827',
               margin: '0 0 1rem 0'
             }}>
-              Contact
+              {t('footer.contact')}
             </h4>
             <div style={{
               color: '#6b7280',
@@ -305,16 +312,16 @@ const Footer: React.FC = () => {
               lineHeight: '1.5'
             }}>
               <p style={{ margin: '0 0 0.5rem 0' }}>
-                <strong>Phone:</strong><br />
-                +1 (555) 123-4567
+                <strong>{t('footer.phoneLabel')}</strong><br />
+                {t('footer.phoneNumber')}
               </p>
               <p style={{ margin: '0 0 0.5rem 0' }}>
-                <strong>Email:</strong><br />
-                support@airquality.com
+                <strong>{t('footer.emailLabel')}</strong><br />
+                {t('footer.emailAddress')}
               </p>
               <p style={{ margin: '0' }}>
-                <strong>Hours:</strong><br />
-                Mon-Fri 9AM-6PM PST
+                <strong>{t('footer.hoursLabel')}</strong><br />
+                {t('footer.hoursText')}
               </p>
             </div>
           </div>
@@ -334,7 +341,7 @@ const Footer: React.FC = () => {
             color: '#6b7280',
             fontSize: '14px'
           }}>
-            © 2024 AirQuality. All rights reserved.
+            {t('footer.copyright')}
           </div>
           
           <div style={{
@@ -348,7 +355,7 @@ const Footer: React.FC = () => {
               fontSize: '14px',
               transition: 'color 0.2s'
             }}>
-              Privacy Policy
+              {t('footer.privacyPolicyFooter')}
             </a>
             <a href="#" style={{
               color: '#6b7280',
@@ -356,7 +363,7 @@ const Footer: React.FC = () => {
               fontSize: '14px',
               transition: 'color 0.2s'
             }}>
-              Terms of Service
+              {t('footer.termsOfServiceFooter')}
             </a>
             <div style={{
               display: 'flex',
@@ -396,16 +403,20 @@ const Footer: React.FC = () => {
 };
 
 // Page Components
-const MapPage: React.FC = () => (
-  <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
-    <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '2rem' }}>
-      Air Quality Map
-    </h1>
-    <Map />
-  </div>
-);
+const MapPage: React.FC = () => {
+  const { t } = useTranslation();
+  return (
+    <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
+      <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '2rem' }}>
+        {t('pages.map.title')}
+      </h1>
+      <Map />
+    </div>
+  );
+};
 
 const ProductsPage: React.FC = () => {
+  const { t } = useTranslation();
   const { products, loading, error } = useProducts();
   const [selectedCategory, setSelectedCategory] = React.useState('all');
   const [sortBy, setSortBy] = React.useState('name');
@@ -453,7 +464,7 @@ const ProductsPage: React.FC = () => {
               marginBottom: '1rem',
               opacity: '0.8'
             }}>
-              Air Quality Products
+              {t('pages.products.title')}
             </h1>
             <p style={{
               fontSize: '1.25rem',
@@ -461,7 +472,7 @@ const ProductsPage: React.FC = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Professional air quality monitoring solutions for every environment
+              {t('pages.products.subtitle')}
             </p>
           </div>
         </div>
@@ -492,7 +503,7 @@ const ProductsPage: React.FC = () => {
                 animation: 'spin 1s linear infinite'
               }} />
               <div style={{ color: '#6b7280', fontSize: '18px' }}>
-                Loading products...
+                {t('pages.products.loading')}
               </div>
             </div>
           </div>
@@ -549,7 +560,7 @@ const ProductsPage: React.FC = () => {
               color: '#dc2626',
               marginBottom: '0.5rem'
             }}>
-              Unable to Load Products
+              {t('pages.products.error.title')}
             </h2>
             <p style={{ color: '#dc2626', fontSize: '1rem' }}>
               {error}
@@ -575,7 +586,7 @@ const ProductsPage: React.FC = () => {
             fontWeight: '700',
             marginBottom: '1rem'
           }}>
-            Air Quality Products
+            {t('pages.products.title')}
           </h1>
           <p style={{
             fontSize: '1.25rem',
@@ -583,7 +594,7 @@ const ProductsPage: React.FC = () => {
             maxWidth: '600px',
             margin: '0 auto 2rem'
           }}>
-            Professional air quality monitoring solutions for every environment
+            {t('pages.products.subtitle')}
           </p>
           
           {/* Quick Stats */}
@@ -596,15 +607,15 @@ const ProductsPage: React.FC = () => {
           }}>
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '2rem', fontWeight: '700' }}>{products.length}</div>
-              <div style={{ opacity: '0.8', fontSize: '0.875rem' }}>Products</div>
+              <div style={{ opacity: '0.8', fontSize: '0.875rem' }}>{t('pages.products.stats.products')}</div>
             </div>
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '2rem', fontWeight: '700' }}>24/7</div>
-              <div style={{ opacity: '0.8', fontSize: '0.875rem' }}>Monitoring</div>
+              <div style={{ opacity: '0.8', fontSize: '0.875rem' }}>{t('pages.products.stats.monitoring')}</div>
             </div>
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: '2rem', fontWeight: '700' }}>99.9%</div>
-              <div style={{ opacity: '0.8', fontSize: '0.875rem' }}>Uptime</div>
+              <div style={{ opacity: '0.8', fontSize: '0.875rem' }}>{t('pages.products.stats.uptime')}</div>
             </div>
           </div>
         </div>
@@ -628,7 +639,7 @@ const ProductsPage: React.FC = () => {
           {/* Category Filter */}
           <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
             <span style={{ fontSize: '14px', fontWeight: '500', color: '#374151' }}>
-              Category:
+              {t('pages.products.filters.category')}
             </span>
             <select
               value={selectedCategory}
@@ -642,18 +653,18 @@ const ProductsPage: React.FC = () => {
                 cursor: 'pointer'
               }}
             >
-              <option value="all">All Products</option>
-              <option value="home">Home</option>
-              <option value="office">Office</option>
-              <option value="industrial">Industrial</option>
-              <option value="portable">Portable</option>
+              <option value="all">{t('pages.products.filters.allProducts')}</option>
+              <option value="home">{t('pages.products.filters.home')}</option>
+              <option value="office">{t('pages.products.filters.office')}</option>
+              <option value="industrial">{t('pages.products.filters.industrial')}</option>
+              <option value="portable">{t('pages.products.filters.portable')}</option>
             </select>
           </div>
           
           {/* Sort Options */}
           <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
             <span style={{ fontSize: '14px', fontWeight: '500', color: '#374151' }}>
-              Sort by:
+              {t('pages.products.filters.sortBy')}
             </span>
             <select
               value={sortBy}
@@ -667,15 +678,15 @@ const ProductsPage: React.FC = () => {
                 cursor: 'pointer'
               }}
             >
-              <option value="name">Name (A-Z)</option>
-              <option value="price-low">Price (Low to High)</option>
-              <option value="price-high">Price (High to Low)</option>
+              <option value="name">{t('pages.products.filters.nameAZ')}</option>
+              <option value="price-low">{t('pages.products.filters.priceLowHigh')}</option>
+              <option value="price-high">{t('pages.products.filters.priceHighLow')}</option>
             </select>
           </div>
           
           {/* Results Count */}
           <div style={{ fontSize: '14px', color: '#6b7280' }}>
-            {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''} found
+            {filteredProducts.length} {t('pages.products.results')}
           </div>
         </div>
       </div>
@@ -701,10 +712,10 @@ const ProductsPage: React.FC = () => {
               color: '#111827',
               marginBottom: '0.5rem'
             }}>
-              No Products Found
+              {t('pages.products.empty.title')}
             </h2>
             <p style={{ color: '#6b7280', marginBottom: '1rem' }}>
-              Try adjusting your filters to see more products.
+              {t('pages.products.empty.description')}
             </p>
             <button
               onClick={() => setSelectedCategory('all')}
@@ -720,7 +731,7 @@ const ProductsPage: React.FC = () => {
                 transition: 'background-color 0.2s'
               }}
             >
-              Clear Filters
+              {t('pages.products.empty.clearFilters')}
             </button>
           </div>
         ) : (
@@ -875,7 +886,7 @@ const ProductsPage: React.FC = () => {
                         fontSize: '12px',
                         color: '#6b7280'
                       }}>
-                        One-time purchase
+                        {t('pages.products.oneTimePurchase')}
                       </div>
                     </div>
                     
@@ -890,7 +901,7 @@ const ProductsPage: React.FC = () => {
                       cursor: 'pointer',
                       transition: 'background-color 0.2s'
                     }}>
-                      Learn More
+                      {t('pages.products.learnMore')}
                     </button>
                   </div>
                 </div>
@@ -904,6 +915,7 @@ const ProductsPage: React.FC = () => {
 };
 
 const GuidePage: React.FC = () => {
+  const { t } = useTranslation();
   const steps = [
     {
       number: 1,
@@ -965,7 +977,7 @@ const GuidePage: React.FC = () => {
   return (
     <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
       <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '2rem' }}>
-        Air Quality Monitor Setup Guide
+        {t('pages.guide.title')}
       </h1>
       
       <div style={{ 
@@ -981,10 +993,10 @@ const GuidePage: React.FC = () => {
           color: '#0369a1',
           marginBottom: '0.5rem' 
         }}>
-          🎯 Quick Start
+          {t('pages.guide.quickStart.title')}
         </h2>
         <p style={{ color: '#0c4a6e', marginBottom: '0' }}>
-          Follow these 5 simple steps to get your air quality monitor up and running in under 30 minutes.
+          {t('pages.guide.quickStart.description')}
         </p>
       </div>
 
@@ -1055,13 +1067,14 @@ const GuidePage: React.FC = () => {
           color: '#92400e',
           marginBottom: '0.5rem' 
         }}>
-          💡 Pro Tips
+          {t('pages.guide.proTips.title')}
         </h3>
         <ul style={{ color: '#92400e', marginLeft: '1.5rem' }}>
-          <li style={{ marginBottom: '0.25rem' }}>Place multiple devices in different rooms for comprehensive monitoring</li>
-          <li style={{ marginBottom: '0.25rem' }}>Set up alerts for unhealthy air quality levels</li>
-          <li style={{ marginBottom: '0.25rem' }}>Share data with family members through the app</li>
-          <li>Export data for long-term trend analysis</li>
+          {(t('pages.guide.proTips.tips', { returnObjects: true }) as string[]).map((tip: string, index: number) => (
+            <li key={index} style={{ marginBottom: '0.25rem' }}>
+              {tip}
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -1079,10 +1092,10 @@ const GuidePage: React.FC = () => {
           color: '#166534',
           marginBottom: '0.5rem' 
         }}>
-          🆘 Need Help?
+          {t('pages.guide.needHelp.title')}
         </h3>
         <p style={{ color: '#166534', marginBottom: '0' }}>
-          Contact our support team at support@airquality.com or call +1 (555) 123-4567
+          {t('pages.guide.needHelp.description')}
         </p>
       </div>
     </div>
@@ -1090,46 +1103,49 @@ const GuidePage: React.FC = () => {
 };
 
 // 404 Page
-const NotFoundPage: React.FC = () => (
-  <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-    <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem' }}>
-      Page Not Found
-    </h1>
-    <p style={{ fontSize: '1.1rem', color: '#6b7280', marginBottom: '2rem' }}>
-      The page you're looking for doesn't exist.
-    </p>
-    <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-      <Link to="/" style={{
-        color: '#2563eb',
-        textDecoration: 'underline',
-        fontSize: '1rem'
-      }}>
-        Go to Home
-      </Link>
-      <Link to="/map" style={{
-        color: '#2563eb',
-        textDecoration: 'underline',
-        fontSize: '1rem'
-      }}>
-        Go to Map
-      </Link>
-      <Link to="/products" style={{
-        color: '#2563eb',
-        textDecoration: 'underline',
-        fontSize: '1rem'
-      }}>
-        Go to Products
-      </Link>
-      <Link to="/guide" style={{
-        color: '#2563eb',
-        textDecoration: 'underline',
-        fontSize: '1rem'
-      }}>
-        Go to Guide
-      </Link>
+const NotFoundPage: React.FC = () => {
+  const { t } = useTranslation();
+  return (
+    <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+      <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem' }}>
+        {t('pages.notFound.title')}
+      </h1>
+      <p style={{ fontSize: '1.1rem', color: '#6b7280', marginBottom: '2rem' }}>
+        {t('pages.notFound.description')}
+      </p>
+      <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+        <Link to="/" style={{
+          color: '#2563eb',
+          textDecoration: 'underline',
+          fontSize: '1rem'
+        }}>
+          {t('pages.notFound.links.goToHome')}
+        </Link>
+        <Link to="/map" style={{
+          color: '#2563eb',
+          textDecoration: 'underline',
+          fontSize: '1rem'
+        }}>
+          {t('pages.notFound.links.goToMap')}
+        </Link>
+        <Link to="/products" style={{
+          color: '#2563eb',
+          textDecoration: 'underline',
+          fontSize: '1rem'
+        }}>
+          {t('pages.notFound.links.goToProducts')}
+        </Link>
+        <Link to="/guide" style={{
+          color: '#2563eb',
+          textDecoration: 'underline',
+          fontSize: '1rem'
+        }}>
+          {t('pages.notFound.links.goToGuide')}
+        </Link>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 // Main App Component
 const App: React.FC = () => {

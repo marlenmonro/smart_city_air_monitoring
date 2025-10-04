@@ -1,0 +1,289 @@
+{
+  "navigation": {
+    "brand": "AirQuality",
+    "home": "Home",
+    "map": "Map", 
+    "products": "Products",
+    "setupGuide": "Setup Guide",
+    "login": "Log in",
+    "getDemo": "Get Demo"
+  },
+  "hero": {
+    "title": "Indoor Air Quality Sensors",
+    "description": "Ensure your indoor air quality is safe with AirQuality's all-in-one environmental sensors. Monitor PM2.5, CO₂, temperature, and humidity in real-time.",
+    "cta": "Explore Devices",
+    "learnMore": "Learn More →"
+  },
+  "features": {
+    "title": "Why Choose AirQuality?",
+    "subtitle": "Professional-grade air quality monitoring with real-time data and intelligent alerts.",
+    "feature1": {
+      "title": "Real-Time Monitoring",
+      "description": "Get instant updates on air quality metrics including PM2.5, CO₂, temperature, and humidity levels."
+    },
+    "feature2": {
+      "title": "Smart Alerts",
+      "description": "Receive notifications when air quality levels exceed safe thresholds, keeping you informed and protected."
+    },
+    "feature3": {
+      "title": "Easy Setup",
+      "description": "Simple installation and configuration with our mobile app. Get started in minutes, not hours."
+    }
+  },
+  "sensorEnvironment": {
+    "title": "Built for Every Space",
+    "description": "Adaptable air quality sensors for homes, offices, schools, and industrial spaces—all connected to one simple platform.",
+    "home": "Home",
+    "office": "Office",
+    "industrial": "Industrial",
+    "homeDescription": "Perfect for residential spaces, monitoring PM2.5, temperature, and humidity. Easy setup with Wi-Fi connectivity and mobile app integration for real-time alerts and historical data tracking.",
+    "officeDescription": "Advanced sensor for office environments, monitoring PM2.5, PM10, CO₂, temperature, and humidity. Features dashboard integration and professional-grade accuracy for workplace air quality management.",
+    "industrialDescription": "Comprehensive industrial-grade sensor monitoring PM2.5, PM10, CO₂, NO₂, SO₂, temperature, and humidity. Features API integration and robust design for demanding industrial environments."
+  },
+  "realTimeMonitoring": {
+    "title": "Real-Time Monitoring",
+    "description": "Monitor air quality metrics in real-time with comprehensive data visualization and historical tracking across all your locations.",
+    "keyFeatures": "Key Metrics Tracked:",
+    "pm25": "PM2.5",
+    "co2": "CO₂",
+    "temperature": "Temperature",
+    "humidity": "Humidity",
+    "tvoc": "TVOC",
+    "aqi": "Air Quality Index",
+    "location": "Office Building - Floor 2",
+    "timestamp": "Dec 15, 2024, 2:30:00 PM",
+    "pm25Trend": "PM2.5 Trend (Last 24h)",
+    "allSystemsNormal": "All Systems Normal",
+    "liveIndicator": "Live",
+    "lastUpdate": "Last update 2 min ago",
+    "statusGood": "Good",
+    "statusModerate": "Moderate",
+    "statusUnhealthy": "Unhealthy"
+  },
+  "smartAlerts": {
+    "title": "Smart Alerts",
+    "description": "Stay informed with intelligent alerts that notify you when air quality levels require attention. Customize thresholds and receive notifications via your preferred method.",
+    "configureTriggers": "Configure Alert Triggers",
+    "threshold": "Threshold",
+    "cancel": "Cancel",
+    "save": "Save",
+    "selectMetric": "Select Metric",
+    "setThreshold": "Set Threshold",
+    "temperatureUnit": "Temperature Unit",
+    "celsius": "°C",
+    "fahrenheit": "°F",
+    "units": {
+      "pm25": "µg/m³",
+      "co2": "ppm",
+      "humidity": "%",
+      "tvoc": "ppb"
+    },
+    "alertFeatures": "Alert Features:",
+    "features": [
+      "Custom threshold configuration for each metric",
+      "Immediate or delayed notification options",
+      "Email and SMS alert delivery",
+      "Historical alert tracking and reporting",
+      "Multi-user notification management"
+    ],
+    "thresholds": {
+      "good": "Good",
+      "moderate": "Moderate", 
+      "unhealthy": "Unhealthy"
+    },
+    "thresholdLabels": {
+      "pm25": {
+        "good": "Good (0-15)",
+        "moderate": "Moderate (15-35)",
+        "unhealthy": "Unhealthy (35+)"
+      },
+      "co2": {
+        "good": "Good (0-400)",
+        "moderate": "Moderate (400-1000)",
+        "unhealthy": "Unhealthy (1000+)"
+      },
+      "temperature": {
+        "goodF": "Good (60-68°F)",
+        "moderateF": "Moderate (68-75°F)",
+        "unhealthyF": "Unhealthy (75°F+)",
+        "goodC": "Good (15-20°C)",
+        "moderateC": "Moderate (20-24°C)",
+        "unhealthyC": "Unhealthy (24°C+)"
+      },
+      "humidity": {
+        "good": "Good (30-50%)",
+        "moderate": "Moderate (50-60%)",
+        "unhealthy": "Unhealthy (60%+)"
+      },
+      "tvoc": {
+        "good": "Good (0-200)",
+        "moderate": "Moderate (200-500)",
+        "unhealthy": "Unhealthy (500+)"
+      },
+      "aqi": {
+        "good": "Good (0-50)",
+        "moderate": "Moderate (50-100)",
+        "unhealthy": "Unhealthy (100+)"
+      }
+    }
+  },
+  "easySetup": {
+    "title": "Easy Setup",
+    "description": "Get your air quality monitoring system up and running in minutes with our intuitive setup process. No technical expertise required.",
+    "setupProcess": "Setup Process:",
+    "steps": [
+      "Download the AirQuality mobile app",
+      "Connect device to WiFi network",
+      "Configure location and device settings",
+      "Set up user accounts and permissions",
+      "Start monitoring in under 5 minutes"
+    ],
+    "deviceSetupWizard": "Device Setup Wizard",
+    "stepIndicator": "Step 2 of 4: Network Configuration",
+    "wifiNetwork": "WiFi Network",
+    "password": "Password",
+    "deviceConnected": "Device Connected",
+    "connectionStatus": "Successfully connected to Office_WiFi_5G",
+    "setupProgress": "Setup Progress",
+    "next": "Next",
+    "continue": "Continue",
+    "back": "Back",
+    "setupSteps": "Setup Steps",
+    "step1": "Connect to WiFi",
+    "step2": "Install Mobile App",
+    "step3": "Configure Settings",
+    "step4": "Start Monitoring"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about air quality monitoring and our sensors.",
+    "question1": "How accurate are the air quality measurements?",
+    "answer1": "Our sensors provide laboratory-grade accuracy with ±5% precision for PM2.5 measurements and ±3% for CO₂ levels. All sensors are calibrated using certified reference standards and undergo rigorous testing before deployment.",
+    "question2": "What is the typical battery life for portable sensors?",
+    "answer2": "The AirGuard Portable sensor offers up to 30 days of continuous monitoring on a single charge, with power-saving modes extending battery life to 60 days. Battery life varies based on measurement frequency and environmental conditions.",
+    "question3": "Can I integrate the sensors with existing building management systems?",
+    "answer3": "Yes, all our sensors support API integration and can connect to most building management systems (BMS), HVAC controls, and IoT platforms. We provide comprehensive documentation and SDKs for seamless integration.",
+    "question4": "What maintenance is required for the sensors?",
+    "answer4": "Our sensors are designed for minimal maintenance. The AirSense Home requires cleaning every 6 months, while industrial sensors may need calibration checks annually. All maintenance schedules are customizable through our dashboard.",
+    "question5": "How do I set up alerts and notifications?",
+    "answer5": "You can configure custom alerts through our mobile app or web dashboard. Set thresholds for any measured parameter, choose notification methods (email, SMS, push notifications), and specify who receives alerts for each location.",
+    "question6": "What happens if a sensor goes offline?",
+    "answer6": "If a sensor loses connectivity, you'll receive an immediate notification. The sensor continues collecting data locally and will sync all stored data once connectivity is restored. Data is never lost during outages.",
+    "question7": "Is my data secure and private?",
+    "answer7": "Absolutely. All data is encrypted in transit and at rest using industry-standard AES-256 encryption. We're SOC 2 Type II compliant and GDPR compliant, ensuring your air quality data remains private and secure.",
+    "question8": "What support options are available?",
+    "answer8": "We offer comprehensive support including 24/7 technical support, online documentation, video tutorials, and dedicated account managers for enterprise customers. Support is available via email, phone, and live chat."
+  },
+  "support": {
+    "title": "Still have questions?",
+    "description": "Our support team is here to help you get the most out of your air quality monitoring system.",
+    "viewSetupGuide": "View Setup Guide",
+    "contactSupport": "Contact Support"
+  },
+  "footer": {
+    "companyDescription": "Professional air quality monitoring solutions for homes, offices, and industrial spaces.",
+    "products": "Products",
+    "airSenseHome": "AirSense Home",
+    "airProOffice": "AirPro Office", 
+    "airMaxIndustrial": "AirMax Industrial",
+    "airGuardPortable": "AirGuard Portable",
+    "allProducts": "All Products",
+    "support": "Support",
+    "setupGuide": "Setup Guide",
+    "documentation": "Documentation",
+    "apiReference": "API Reference",
+    "supportContact": "Contact Support",
+    "systemStatus": "System Status",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "careers": "Careers",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contact": "Contact",
+    "phoneLabel": "Phone:",
+    "phoneNumber": "+1 (555) 123-4567",
+    "emailLabel": "Email:",
+    "emailAddress": "support@airquality.com",
+    "hoursLabel": "Hours:",
+    "hoursText": "Mon-Fri 9AM-6PM PST",
+    "copyright": "© 2024 AirQuality. All rights reserved.",
+    "privacyPolicyFooter": "Privacy Policy",
+    "termsOfServiceFooter": "Terms of Service"
+  },
+  "pages": {
+    "map": {
+      "title": "Air Quality Map"
+    },
+    "products": {
+      "title": "Air Quality Products",
+      "subtitle": "Professional air quality monitoring solutions for every environment",
+      "stats": {
+        "products": "Products",
+        "monitoring": "Monitoring",
+        "uptime": "Uptime"
+      },
+      "filters": {
+        "category": "Category:",
+        "sortBy": "Sort by:",
+        "allProducts": "All Products",
+        "home": "Home",
+        "office": "Office",
+        "industrial": "Industrial",
+        "portable": "Portable",
+        "nameAZ": "Name (A-Z)",
+        "priceLowHigh": "Price (Low to High)",
+        "priceHighLow": "Price (High to Low)"
+      },
+      "results": "product{count, plural, one {} other {s}} found",
+      "empty": {
+        "title": "No Products Found",
+        "description": "Try adjusting your filters to see more products.",
+        "clearFilters": "Clear Filters"
+      },
+      "learnMore": "Learn More",
+      "oneTimePurchase": "One-time purchase",
+      "loading": "Loading products...",
+      "error": {
+        "title": "Unable to Load Products"
+      }
+    },
+    "guide": {
+      "title": "Air Quality Monitor Setup Guide",
+      "quickStart": {
+        "title": "🎯 Quick Start",
+        "description": "Follow these 5 simple steps to get your air quality monitor up and running in under 30 minutes."
+      },
+      "proTips": {
+        "title": "💡 Pro Tips",
+        "tips": [
+          "Place multiple devices in different rooms for comprehensive monitoring",
+          "Set up alerts for unhealthy air quality levels",
+          "Share data with family members through the app",
+          "Export data for long-term trend analysis"
+        ]
+      },
+      "needHelp": {
+        "title": "🆘 Need Help?",
+        "description": "Contact our support team at support@airquality.com or call +1 (555) 123-4567"
+      }
+    },
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "The page you're looking for doesn't exist.",
+      "links": {
+        "goToHome": "Go to Home",
+        "goToMap": "Go to Map",
+        "goToProducts": "Go to Products",
+        "goToGuide": "Go to Guide"
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel"
+  }
+}

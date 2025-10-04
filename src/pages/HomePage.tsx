@@ -1,8 +1,10 @@
 // Home Page Component - Main Landing Page
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const HomePage: React.FC = () => {
+  const { t } = useTranslation();
   const [expandedSensor, setExpandedSensor] = useState('AirSense Home');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
   const [selectedMetric, setSelectedMetric] = useState('PM2.5');
@@ -31,12 +33,15 @@ const HomePage: React.FC = () => {
       <section style={{
         maxWidth: '1200px',
         margin: '0 auto',
-        padding: 'clamp(3rem, 8vw, 6rem) clamp(1rem, 4vw, 2rem)',
+        paddingTop: 'clamp(3rem, 8vw, 6rem)',
+        paddingBottom: 'clamp(1.5rem, 3vw, 2.5rem)',
+        paddingLeft: 'clamp(1rem, 4vw, 2rem)',
+        paddingRight: 'clamp(1rem, 4vw, 2rem)',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         gap: 'clamp(2rem, 6vw, 4rem)',
-        minHeight: '80vh',
+        minHeight: 'auto',
         position: 'relative'
       }}>
         {/* Responsive Container */}
@@ -61,7 +66,7 @@ const HomePage: React.FC = () => {
             marginBottom: '1.5rem',
             lineHeight: '1.1'
           }}>
-            Indoor Air Quality Sensors
+            {t('hero.title')}
           </h1>
           
           <p style={{
@@ -72,7 +77,7 @@ const HomePage: React.FC = () => {
             maxWidth: '600px',
             margin: '0 auto 2.5rem'
           }}>
-            Ensure your indoor air quality is safe with AirQuality's all-in-one environmental sensors. Monitor PM2.5, CO₂, temperature, and humidity in real-time.
+            {t('hero.description')}
           </p>
           
           <div style={{ 
@@ -97,7 +102,7 @@ const HomePage: React.FC = () => {
               width: '100%',
               textAlign: 'center'
             }}>
-              Explore Devices
+              {t('hero.cta')}
             </Link>
             
             <Link to="/guide" style={{
@@ -109,7 +114,7 @@ const HomePage: React.FC = () => {
               borderBottom: '1px solid transparent',
               transition: 'all 0.2s'
             }}>
-              Learn More →
+              {t('hero.learnMore')}
             </Link>
           </div>
         </div>
@@ -256,7 +261,7 @@ const HomePage: React.FC = () => {
             color: '#111827',
             marginBottom: '1rem'
           }}>
-            Why Choose AirQuality?
+            {t('features.title')}
           </h2>
           
           <p style={{
@@ -266,7 +271,7 @@ const HomePage: React.FC = () => {
             maxWidth: '600px',
             margin: '0 auto 3rem'
           }}>
-            Professional-grade air quality monitoring with real-time data and intelligent alerts.
+            {t('features.subtitle')}
           </p>
           
           <div style={{
@@ -343,13 +348,13 @@ const HomePage: React.FC = () => {
                 color: '#111827',
                 marginBottom: '0.5rem'
               }}>
-                Real-Time Monitoring
+                {t('realTimeMonitoring.title')}
               </h3>
               <p style={{
                 color: '#6b7280',
                 lineHeight: '1.6'
               }}>
-                Get instant updates on air quality metrics including PM2.5, CO₂, temperature, and humidity levels.
+                {t('features.feature1.description')}
               </p>
             </div>
             
@@ -404,13 +409,13 @@ const HomePage: React.FC = () => {
                 color: '#111827',
                 marginBottom: '0.5rem'
               }}>
-                Smart Alerts
+                {t('smartAlerts.title')}
               </h3>
               <p style={{
                 color: '#6b7280',
                 lineHeight: '1.6'
               }}>
-                Receive notifications when air quality levels exceed safe thresholds, keeping you informed and protected.
+                {t('features.feature2.description')}
               </p>
             </div>
             
@@ -491,13 +496,13 @@ const HomePage: React.FC = () => {
                 color: '#111827',
                 marginBottom: '0.5rem'
               }}>
-                Easy Setup
+                {t('easySetup.title')}
               </h3>
               <p style={{
                 color: '#6b7280',
                 lineHeight: '1.6'
               }}>
-                Simple installation and configuration with our mobile app. Get started in minutes, not hours.
+                {t('features.feature3.description')}
               </p>
             </div>
           </div>
@@ -656,7 +661,7 @@ const HomePage: React.FC = () => {
               color: '#111827',
               marginBottom: '1rem'
             }}>
-              Built for Every Space
+              {t('sensorEnvironment.title')}
             </h2>
             
             <p style={{
@@ -665,7 +670,7 @@ const HomePage: React.FC = () => {
               marginBottom: '2rem',
               lineHeight: '1.6'
             }}>
-              Adaptable air quality sensors for homes, offices, schools, and industrial spaces—all connected to one simple platform.
+              {t('sensorEnvironment.description')}
             </p>
             
             {/* Sensor Models */}
@@ -730,7 +735,7 @@ const HomePage: React.FC = () => {
                     color: expandedSensor === 'AirSense Home' ? '#111827' : '#6b7280',
                     margin: '0'
                   }}>
-                    AirSense Home
+                    {t('sensorEnvironment.home')}
                   </h3>
                 </div>
                 {expandedSensor === 'AirSense Home' && (
@@ -739,7 +744,7 @@ const HomePage: React.FC = () => {
                     lineHeight: '1.6',
                     margin: '0'
                   }}>
-                    Perfect for residential spaces, monitoring PM2.5, temperature, and humidity. Easy setup with Wi-Fi connectivity and mobile app integration for real-time alerts and historical data tracking.
+                    {t('sensorEnvironment.homeDescription')}
                   </p>
                 )}
               </div>
@@ -798,7 +803,7 @@ const HomePage: React.FC = () => {
                     color: expandedSensor === 'AirPro Office' ? '#111827' : '#6b7280',
                     margin: '0'
                   }}>
-                    AirPro Office
+                    {t('sensorEnvironment.office')}
                   </h3>
                 </div>
                 {expandedSensor === 'AirPro Office' && (
@@ -807,7 +812,7 @@ const HomePage: React.FC = () => {
                     lineHeight: '1.6',
                     margin: '0'
                   }}>
-                    Advanced sensor for office environments, monitoring PM2.5, PM10, CO₂, temperature, and humidity. Features dashboard integration and professional-grade accuracy for workplace air quality management.
+                    {t('sensorEnvironment.officeDescription')}
                   </p>
                 )}
               </div>
@@ -865,7 +870,7 @@ const HomePage: React.FC = () => {
                     color: expandedSensor === 'AirMax Industrial' ? '#111827' : '#6b7280',
                     margin: '0'
                   }}>
-                    AirMax Industrial
+                    {t('sensorEnvironment.industrial')}
                   </h3>
                 </div>
                 {expandedSensor === 'AirMax Industrial' && (
@@ -874,7 +879,7 @@ const HomePage: React.FC = () => {
                     lineHeight: '1.6',
                     margin: '0'
                   }}>
-                    Comprehensive industrial-grade sensor monitoring PM2.5, PM10, CO₂, NO₂, SO₂, temperature, and humidity. Features API integration and robust design for demanding industrial environments.
+                    {t('sensorEnvironment.industrialDescription')}
                   </p>
                 )}
               </div>
@@ -899,7 +904,7 @@ const HomePage: React.FC = () => {
                 textDecoration: 'none',
                 display: 'inline-block'
               }}>
-                Explore Devices
+                {t('hero.cta')}
               </Link>
             </div>
           </div>
@@ -941,7 +946,7 @@ const HomePage: React.FC = () => {
               color: '#111827',
               marginBottom: '1rem'
             }}>
-              Real-Time Monitoring
+              {t('realTimeMonitoring.title')}
             </h2>
             
             <p style={{
@@ -950,7 +955,7 @@ const HomePage: React.FC = () => {
               marginBottom: '2rem',
               lineHeight: '1.6'
             }}>
-              Monitor air quality metrics in real-time with comprehensive data visualization and historical tracking across all your locations.
+              {t('realTimeMonitoring.description')}
             </p>
             
             <div style={{ marginBottom: '2rem' }}>
@@ -960,14 +965,14 @@ const HomePage: React.FC = () => {
                 color: '#111827',
                 marginBottom: '1rem'
               }}>
-                Key Metrics Tracked:
+                {t('realTimeMonitoring.keyFeatures')}
               </h3>
               <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(2, 1fr)',
                 gap: '0.5rem'
               }}>
-                {['PM2.5', 'CO₂', 'Temperature', 'Humidity', 'TVOC', 'Air Quality Index'].map((metric) => (
+                {[t('realTimeMonitoring.pm25'), t('realTimeMonitoring.co2'), t('realTimeMonitoring.temperature'), t('realTimeMonitoring.humidity'), t('realTimeMonitoring.tvoc'), t('realTimeMonitoring.aqi')].map((metric) => (
                   <div key={metric} style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -1014,14 +1019,14 @@ const HomePage: React.FC = () => {
                     color: '#111827',
                     margin: '0'
                   }}>
-                    Office Building - Floor 2
+                    {t('realTimeMonitoring.location')}
                   </h4>
                   <p style={{
                     fontSize: '12px',
                     color: '#6b7280',
                     margin: '0'
                   }}>
-                    Dec 15, 2024, 2:30:00 PM
+                    {t('realTimeMonitoring.timestamp')}
                   </p>
                 </div>
                 <div style={{
@@ -1140,16 +1145,28 @@ const HomePage: React.FC = () => {
                       fontWeight: '600',
                       color: '#111827'
                     }}>
-                      PM2.5 Trend (Last 24h)
+                      {t('realTimeMonitoring.pm25Trend')}
                     </div>
                     <div style={{
-                      fontSize: '10px',
-                      color: '#6b7280',
-                      backgroundColor: '#e5e7eb',
-                      padding: '0.25rem 0.5rem',
-                      borderRadius: '4px'
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.25rem'
                     }}>
-                      Live
+                      <div style={{
+                        width: '6px',
+                        height: '6px',
+                        backgroundColor: '#ef4444',
+                        borderRadius: '50%'
+                      }} />
+                      <span style={{
+                        fontSize: '10px',
+                        color: '#6b7280',
+                        backgroundColor: '#e5e7eb',
+                        padding: '0.25rem 0.5rem',
+                        borderRadius: '4px'
+                      }}>
+                        {t('realTimeMonitoring.liveIndicator')}
+                      </span>
                     </div>
                   </div>
                   
@@ -1228,7 +1245,7 @@ const HomePage: React.FC = () => {
                       borderRadius: '50%'
                     }} />
                     <span style={{ fontSize: '11px', color: '#111827', fontWeight: '500' }}>
-                      All Systems Normal
+                      {t('realTimeMonitoring.allSystemsNormal')}
                     </span>
                   </div>
                   <div style={{
@@ -1239,7 +1256,7 @@ const HomePage: React.FC = () => {
                     borderRadius: '4px',
                     border: '1px solid #e5e7eb'
                   }}>
-                    Last Update: 2 min ago
+                    {t('realTimeMonitoring.lastUpdate')}
                   </div>
                 </div>
               </div>
@@ -1294,14 +1311,14 @@ const HomePage: React.FC = () => {
                   color: '#111827',
                   margin: '0 0 0.25rem 0'
                 }}>
-                  Configure Alert Triggers
+                  {t('smartAlerts.configureTriggers')}
                 </h4>
                 <p style={{
                   fontSize: '12px',
                   color: '#6b7280',
                   margin: '0'
                 }}>
-                  Office Building - Floor 2
+                  {t('realTimeMonitoring.location')}
                 </p>
               </div>
               
@@ -1315,7 +1332,7 @@ const HomePage: React.FC = () => {
                     display: 'block',
                     marginBottom: '0.5rem'
                   }}>
-                    {selectedMetric} Threshold
+                    {selectedMetric} {t('smartAlerts.threshold')}
                   </label>
                   <div style={{
                     display: 'flex',
@@ -1373,15 +1390,15 @@ const HomePage: React.FC = () => {
                           backgroundColor: 'white'
                         }}
                       >
-                        <option value="F">°F</option>
-                        <option value="C">°C</option>
+                        <option value="F">{t('smartAlerts.fahrenheit')}</option>
+                        <option value="C">{t('smartAlerts.celsius')}</option>
                       </select>
                     ) : (
                       <span style={{ fontSize: '14px', color: '#6b7280' }}>
-                        {selectedMetric === 'PM2.5' ? 'µg/m³' : 
-                         selectedMetric === 'CO₂' ? 'ppm' :
-                         selectedMetric === 'Humidity' ? '%' :
-                         selectedMetric === 'TVOC' ? 'ppb' : ''}
+                        {selectedMetric === 'PM2.5' ? t('smartAlerts.units.pm25') : 
+                         selectedMetric === 'CO₂' ? t('smartAlerts.units.co2') :
+                         selectedMetric === 'Humidity' ? t('smartAlerts.units.humidity') :
+                         selectedMetric === 'TVOC' ? t('smartAlerts.units.tvoc') : ''}
                       </span>
                     )}
                   </div>
@@ -1469,16 +1486,48 @@ const HomePage: React.FC = () => {
                     {(() => {
                       const getThresholds = (metric: string) => {
                         switch(metric) {
-                          case 'PM2.5': return { good: 'Good (0-15)', moderate: 'Moderate (15-35)', unhealthy: 'Unhealthy (35+)' };
-                          case 'CO₂': return { good: 'Good (0-400)', moderate: 'Moderate (400-1000)', unhealthy: 'Unhealthy (1000+)' };
+                          case 'PM2.5': return { 
+                            good: t('smartAlerts.thresholdLabels.pm25.good'), 
+                            moderate: t('smartAlerts.thresholdLabels.pm25.moderate'), 
+                            unhealthy: t('smartAlerts.thresholdLabels.pm25.unhealthy') 
+                          };
+                          case 'CO₂': return { 
+                            good: t('smartAlerts.thresholdLabels.co2.good'), 
+                            moderate: t('smartAlerts.thresholdLabels.co2.moderate'), 
+                            unhealthy: t('smartAlerts.thresholdLabels.co2.unhealthy') 
+                          };
                           case 'Temperature': 
                             return temperatureUnit === 'F'
-                              ? { good: 'Good (60-68°F)', moderate: 'Moderate (68-75°F)', unhealthy: 'Unhealthy (75°F+)' }
-                              : { good: 'Good (15-20°C)', moderate: 'Moderate (20-24°C)', unhealthy: 'Unhealthy (24°C+)' };
-                          case 'Humidity': return { good: 'Good (30-50%)', moderate: 'Moderate (50-60%)', unhealthy: 'Unhealthy (60%+)' };
-                          case 'TVOC': return { good: 'Good (0-200)', moderate: 'Moderate (200-500)', unhealthy: 'Unhealthy (500+)' };
-                          case 'AQI': return { good: 'Good (0-50)', moderate: 'Moderate (50-100)', unhealthy: 'Unhealthy (100+)' };
-                          default: return { good: 'Good (0-15)', moderate: 'Moderate (15-35)', unhealthy: 'Unhealthy (35+)' };
+                              ? { 
+                                  good: t('smartAlerts.thresholdLabels.temperature.goodF'), 
+                                  moderate: t('smartAlerts.thresholdLabels.temperature.moderateF'), 
+                                  unhealthy: t('smartAlerts.thresholdLabels.temperature.unhealthyF') 
+                                }
+                              : { 
+                                  good: t('smartAlerts.thresholdLabels.temperature.goodC'), 
+                                  moderate: t('smartAlerts.thresholdLabels.temperature.moderateC'), 
+                                  unhealthy: t('smartAlerts.thresholdLabels.temperature.unhealthyC') 
+                                };
+                          case 'Humidity': return { 
+                            good: t('smartAlerts.thresholdLabels.humidity.good'), 
+                            moderate: t('smartAlerts.thresholdLabels.humidity.moderate'), 
+                            unhealthy: t('smartAlerts.thresholdLabels.humidity.unhealthy') 
+                          };
+                          case 'TVOC': return { 
+                            good: t('smartAlerts.thresholdLabels.tvoc.good'), 
+                            moderate: t('smartAlerts.thresholdLabels.tvoc.moderate'), 
+                            unhealthy: t('smartAlerts.thresholdLabels.tvoc.unhealthy') 
+                          };
+                          case 'AQI': return { 
+                            good: t('smartAlerts.thresholdLabels.aqi.good'), 
+                            moderate: t('smartAlerts.thresholdLabels.aqi.moderate'), 
+                            unhealthy: t('smartAlerts.thresholdLabels.aqi.unhealthy') 
+                          };
+                          default: return { 
+                            good: t('smartAlerts.thresholdLabels.pm25.good'), 
+                            moderate: t('smartAlerts.thresholdLabels.pm25.moderate'), 
+                            unhealthy: t('smartAlerts.thresholdLabels.pm25.unhealthy') 
+                          };
                         }
                       };
                       const labels = getThresholds(selectedMetric);
@@ -1508,7 +1557,7 @@ const HomePage: React.FC = () => {
                     fontSize: '12px',
                     color: '#6b7280'
                   }}>
-                    Cancel
+                    {t('smartAlerts.cancel')}
                   </button>
                   <button style={{
                     padding: '0.5rem 1rem',
@@ -1518,7 +1567,7 @@ const HomePage: React.FC = () => {
                     fontSize: '12px',
                     color: 'white'
                   }}>
-                    Save
+                    {t('smartAlerts.save')}
                   </button>
                 </div>
               </div>
@@ -1538,7 +1587,7 @@ const HomePage: React.FC = () => {
               marginBottom: '1rem',
               lineHeight: '1.2'
             }}>
-              Smart Alerts
+              {t('smartAlerts.title')}
             </h2>
             
             <p style={{
@@ -1548,7 +1597,7 @@ const HomePage: React.FC = () => {
               lineHeight: '1.6',
               textAlign: 'left'
             }}>
-              Configure intelligent alerts that notify you when air quality levels exceed safe thresholds. Set custom thresholds and notification preferences for each location.
+              {t('smartAlerts.description')}
             </p>
             
             <div style={{ marginBottom: '2rem' }}>
@@ -1559,7 +1608,7 @@ const HomePage: React.FC = () => {
                 marginBottom: '1rem',
                 textAlign: 'left'
               }}>
-                Alert Features:
+                {t('smartAlerts.alertFeatures')}
               </h3>
               <div style={{
                 display: 'grid',
@@ -1567,14 +1616,8 @@ const HomePage: React.FC = () => {
                 gap: '0.75rem',
                 textAlign: 'left'
               }}>
-                {[
-                  'Custom threshold configuration for each metric',
-                  'Immediate or delayed notification options',
-                  'Email and SMS alert delivery',
-                  'Historical alert tracking and reporting',
-                  'Multi-user notification management'
-                ].map((feature) => (
-                  <div key={feature} style={{
+                {(t('smartAlerts.features', { returnObjects: true }) as string[]).map((feature: string, index: number) => (
+                  <div key={index} style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.75rem'
@@ -1629,7 +1672,7 @@ const HomePage: React.FC = () => {
               color: '#111827',
               marginBottom: '1rem'
             }}>
-              Easy Setup
+              {t('easySetup.title')}
             </h2>
             
             <p style={{
@@ -1638,7 +1681,7 @@ const HomePage: React.FC = () => {
               marginBottom: '2rem',
               lineHeight: '1.6'
             }}>
-              Get your air quality monitoring system up and running in minutes with our intuitive setup wizard and mobile app configuration.
+              {t('easySetup.description')}
             </p>
             
             <div style={{ marginBottom: '2rem' }}>
@@ -1648,21 +1691,15 @@ const HomePage: React.FC = () => {
                 color: '#111827',
                 marginBottom: '1rem'
               }}>
-                Setup Process:
+                {t('easySetup.setupProcess')}
               </h3>
               <div style={{
                 display: 'grid',
                 gridTemplateColumns: '1fr',
                 gap: '0.75rem'
               }}>
-                {[
-                  'Download the AirQuality mobile app',
-                  'Connect device to WiFi network',
-                  'Configure location and device settings',
-                  'Set up user accounts and permissions',
-                  'Start monitoring in under 5 minutes'
-                ].map((step, index) => (
-                  <div key={step} style={{
+                {(t('easySetup.steps', { returnObjects: true }) as string[]).map((step: string, index: number) => (
+                  <div key={index} style={{
                     display: 'flex',
                     alignItems: 'center',
                     gap: '0.75rem'
@@ -1712,14 +1749,14 @@ const HomePage: React.FC = () => {
                   color: '#111827',
                   margin: '0 0 0.25rem 0'
                 }}>
-                  Device Setup Wizard
+                  {t('easySetup.deviceSetupWizard')}
                 </h4>
                 <p style={{
                   fontSize: '12px',
                   color: '#6b7280',
                   margin: '0'
                 }}>
-                  Step 2 of 4: Network Configuration
+                  {t('easySetup.stepIndicator')}
                 </p>
               </div>
               
@@ -1733,7 +1770,7 @@ const HomePage: React.FC = () => {
                     display: 'block',
                     marginBottom: '0.5rem'
                   }}>
-                    WiFi Network
+                    {t('easySetup.wifiNetwork')}
                   </label>
                   <select style={{
                     width: '100%',
@@ -1757,7 +1794,7 @@ const HomePage: React.FC = () => {
                     display: 'block',
                     marginBottom: '0.5rem'
                   }}>
-                    Password
+                    {t('easySetup.password')}
                   </label>
                   <input style={{
                     width: '100%',
@@ -1793,7 +1830,7 @@ const HomePage: React.FC = () => {
                       fontWeight: '500',
                       color: '#111827'
                     }}>
-                      Device Connected
+                      {t('easySetup.deviceConnected')}
                     </span>
                   </div>
                   <div style={{
@@ -1811,7 +1848,7 @@ const HomePage: React.FC = () => {
                     color: '#6b7280',
                     marginBottom: '0.5rem'
                   }}>
-                    Setup Progress
+                    {t('easySetup.setupProgress')}
                   </div>
                   <div style={{
                     height: '4px',
@@ -1842,7 +1879,7 @@ const HomePage: React.FC = () => {
                     fontSize: '14px',
                     color: '#6b7280'
                   }}>
-                    Back
+                    {t('easySetup.back')}
                   </button>
                   <button style={{
                     padding: '0.75rem 1rem',
@@ -1852,7 +1889,7 @@ const HomePage: React.FC = () => {
                     fontSize: '14px',
                     color: 'white'
                   }}>
-                    Continue
+                    {t('easySetup.continue')}
                   </button>
                 </div>
               </div>
@@ -1890,7 +1927,7 @@ const HomePage: React.FC = () => {
               color: '#111827',
               marginBottom: '1rem'
             }}>
-              Frequently Asked Questions
+              {t('faq.title')}
             </h2>
             <p style={{
               fontSize: '1.125rem',
@@ -1898,7 +1935,7 @@ const HomePage: React.FC = () => {
               maxWidth: '600px',
               margin: '0 auto'
             }}>
-              Everything you need to know about air quality monitoring and our sensors.
+              {t('faq.subtitle')}
             </p>
           </div>
           
@@ -1909,36 +1946,36 @@ const HomePage: React.FC = () => {
           }}>
             {[
               {
-                question: "How accurate are the air quality measurements?",
-                answer: "Our sensors provide laboratory-grade accuracy with ±5% precision for PM2.5 measurements and ±3% for CO₂ levels. All sensors are calibrated using certified reference standards and undergo rigorous testing before deployment."
+                question: t('faq.question1'),
+                answer: t('faq.answer1')
               },
               {
-                question: "What is the typical battery life for portable sensors?",
-                answer: "The AirGuard Portable sensor offers up to 30 days of continuous monitoring on a single charge, with power-saving modes extending battery life to 60 days. Battery life varies based on measurement frequency and environmental conditions."
+                question: t('faq.question2'),
+                answer: t('faq.answer2')
               },
               {
-                question: "Can I integrate the sensors with existing building management systems?",
-                answer: "Yes, all our sensors support API integration and can connect to most building management systems (BMS), HVAC controls, and IoT platforms. We provide comprehensive documentation and SDKs for seamless integration."
+                question: t('faq.question3'),
+                answer: t('faq.answer3')
               },
               {
-                question: "What maintenance is required for the sensors?",
-                answer: "Our sensors are designed for minimal maintenance. The AirSense Home requires cleaning every 6 months, while industrial sensors may need calibration checks annually. All maintenance schedules are customizable through our dashboard."
+                question: t('faq.question4'),
+                answer: t('faq.answer4')
               },
               {
-                question: "How do I set up alerts and notifications?",
-                answer: "You can configure custom alerts through our mobile app or web dashboard. Set thresholds for any measured parameter, choose notification methods (email, SMS, push notifications), and specify who receives alerts for each location."
+                question: t('faq.question5'),
+                answer: t('faq.answer5')
               },
               {
-                question: "What happens if a sensor goes offline?",
-                answer: "If a sensor loses connectivity, you'll receive an immediate notification. The sensor continues collecting data locally and will sync all stored data once connectivity is restored. Data is never lost during outages."
+                question: t('faq.question6'),
+                answer: t('faq.answer6')
               },
               {
-                question: "Is my data secure and private?",
-                answer: "Absolutely. All data is encrypted in transit and at rest using industry-standard AES-256 encryption. We're SOC 2 Type II compliant and GDPR compliant, ensuring your air quality data remains private and secure."
+                question: t('faq.question7'),
+                answer: t('faq.answer7')
               },
               {
-                question: "Can I monitor multiple locations from one dashboard?",
-                answer: "Yes, our platform supports unlimited locations and sensors. You can organize locations by building, floor, or department, and view real-time data, historical trends, and alerts across all your sites from a single dashboard."
+                question: t('faq.question8'),
+                answer: t('faq.answer8')
               }
             ].map((faq, index) => (
               <div
@@ -2045,13 +2082,13 @@ const HomePage: React.FC = () => {
               color: '#111827',
               marginBottom: '0.5rem'
             }}>
-              Still have questions?
+              {t('support.title')}
             </h3>
             <p style={{
               color: '#6b7280',
               marginBottom: '1.5rem'
             }}>
-              Our support team is here to help you get the most out of your air quality monitoring system.
+              {t('support.description')}
             </p>
             <div style={{
               display: 'flex',
@@ -2070,7 +2107,7 @@ const HomePage: React.FC = () => {
                 transition: 'all 0.2s',
                 display: 'inline-block'
               }}>
-                View Setup Guide
+                {t('support.viewSetupGuide')}
               </Link>
               <a href="mailto:support@airquality.com" style={{
                 padding: '12px 24px',
@@ -2084,7 +2121,7 @@ const HomePage: React.FC = () => {
                 transition: 'all 0.2s',
                 display: 'inline-block'
               }}>
-                Contact Support
+                {t('support.contactSupport')}
               </a>
             </div>
           </div>
