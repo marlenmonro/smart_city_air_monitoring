@@ -327,19 +327,34 @@ const HomePage: React.FC = () => {
             {/* Feature 1 */}
             <div style={{
               padding: '2rem',
-              borderRadius: '12px',
-              border: '1px solid #e5e7eb',
-              textAlign: 'left'
+              borderRadius: '16px',
+              background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
+              border: '1px solid rgba(226, 232, 240, 0.5)',
+              textAlign: 'left',
+              boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              transform: 'translateY(0)',
+              position: 'relative',
+              overflow: 'hidden'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';
             }}>
               <div style={{
-                width: '48px',
-                height: '48px',
-                backgroundColor: '#dbeafe',
-                borderRadius: '8px',
+                width: '56px',
+                height: '56px',
+                background: 'linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%)',
+                borderRadius: '12px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '1rem'
+                marginBottom: '1.5rem',
+                boxShadow: '0 4px 6px -1px rgba(59, 130, 246, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
               }}>
                 <div style={{
                   width: '24px',
@@ -405,19 +420,34 @@ const HomePage: React.FC = () => {
             {/* Feature 2 */}
             <div style={{
               padding: '2rem',
-              borderRadius: '12px',
-              border: '1px solid #e5e7eb',
-              textAlign: 'left'
+              borderRadius: '16px',
+              background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
+              border: '1px solid rgba(226, 232, 240, 0.5)',
+              textAlign: 'left',
+              boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              transform: 'translateY(0)',
+              position: 'relative',
+              overflow: 'hidden'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';
             }}>
               <div style={{
-                width: '48px',
-                height: '48px',
-                backgroundColor: '#dcfce7',
-                borderRadius: '8px',
+                width: '56px',
+                height: '56px',
+                background: 'linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%)',
+                borderRadius: '12px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '1rem'
+                marginBottom: '1.5rem',
+                boxShadow: '0 4px 6px -1px rgba(34, 197, 94, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
               }}>
                 <div style={{
                   width: '20px',
@@ -466,19 +496,34 @@ const HomePage: React.FC = () => {
             {/* Feature 3 */}
             <div style={{
               padding: '2rem',
-              borderRadius: '12px',
-              border: '1px solid #e5e7eb',
-              textAlign: 'left'
+              borderRadius: '16px',
+              background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
+              border: '1px solid rgba(226, 232, 240, 0.5)',
+              textAlign: 'left',
+              boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              transform: 'translateY(0)',
+              position: 'relative',
+              overflow: 'hidden'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';
             }}>
               <div style={{
-                width: '48px',
-                height: '48px',
-                backgroundColor: '#fef3c7',
-                borderRadius: '8px',
+                width: '56px',
+                height: '56px',
+                background: 'linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)',
+                borderRadius: '12px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '1rem'
+                marginBottom: '1.5rem',
+                boxShadow: '0 4px 6px -1px rgba(245, 158, 11, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
               }}>
                 <div style={{
                   width: '24px',
@@ -725,6 +770,7 @@ const HomePage: React.FC = () => {
               {t('sensorEnvironment.description')}
             </p>
             
+            
             {/* Sensor Models */}
             <div style={{
               border: '1px solid rgba(226, 232, 240, 0.5)',
@@ -772,13 +818,19 @@ const HomePage: React.FC = () => {
                   marginBottom: expandedSensor === 'AirSense Home' ? '1rem' : '0'
                 }}>
                   <div style={{
-                    width: '20px',
-                    height: '20px',
-                    backgroundColor: expandedSensor === 'AirSense Home' ? '#1e40af' : '#d1d5db',
-                    borderRadius: '4px',
+                    width: '24px',
+                    height: '24px',
+                    background: expandedSensor === 'AirSense Home' 
+                      ? 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)' 
+                      : 'linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)',
+                    borderRadius: '6px',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    boxShadow: expandedSensor === 'AirSense Home' 
+                      ? '0 2px 4px -1px rgba(30, 64, 175, 0.3)' 
+                      : '0 1px 2px -1px rgba(0, 0, 0, 0.1)',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
                   }}>
                     <div style={{
                       width: '0',
@@ -951,18 +1003,37 @@ const HomePage: React.FC = () => {
               justifyContent: 'flex-end'
             }}>
               <Link to="/products" style={{
-                padding: '12px 24px',
-                backgroundColor: 'transparent',
-                border: '1px solid #d1d5db',
-                borderRadius: '8px',
-                fontSize: '16px',
-                fontWeight: '500',
-                color: '#111827',
+                padding: '0.875rem 1.75rem',
+                background: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
+                color: 'white',
+                border: 'none',
+                borderRadius: '10px',
+                fontSize: '14px',
+                fontWeight: '600',
                 cursor: 'pointer',
-                transition: 'all 0.2s',
-                textDecoration: 'none',
-                display: 'inline-block'
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                boxShadow: '0 4px 14px 0 rgba(30, 64, 175, 0.25)',
+                transform: 'translateY(0)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                textDecoration: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px 0 rgba(30, 64, 175, 0.35)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 14px 0 rgba(30, 64, 175, 0.25)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)';
               }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
                 {t('hero.cta')}
               </Link>
             </div>
