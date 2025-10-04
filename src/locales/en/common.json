@@ -243,12 +243,43 @@
       "learnMore": "Learn More",
       "oneTimePurchase": "One-time purchase",
       "loading": "Loading products...",
+      "loadingProducts": "Loading products...",
       "error": {
         "title": "Unable to Load Products"
       }
     },
     "guide": {
-      "title": "Air Quality Monitor Setup Guide",
+      "title": "Setup Guide",
+      "bluetoothSetup": "Bluetooth Setup",
+      "wifiSetup": "Wi-Fi Setup",
+      "troubleshooting": "Troubleshooting",
+      "bluetoothSteps": [
+        "Ensure your device is powered on and in pairing mode",
+        "Open your mobile device's Bluetooth settings",
+        "Search for \"AirSense\" or your device model name",
+        "Select your device from the available list",
+        "Enter the pairing code if prompted (usually \"0000\" or \"1234\")",
+        "Download and open the AirQuality mobile app",
+        "Follow the in-app setup wizard to complete configuration"
+      ],
+      "wifiSteps": [
+        "Connect your device to power and wait for the LED to blink",
+        "Open your mobile device's Wi-Fi settings",
+        "Connect to the \"AirSense-Setup\" network",
+        "Open a web browser and go to http://192.168.4.1",
+        "Select your home Wi-Fi network from the list",
+        "Enter your Wi-Fi password",
+        "Wait for the device to connect (LED will turn solid green)",
+        "Return to your normal Wi-Fi network",
+        "Open the AirQuality app to verify connection"
+      ],
+      "troubleshootingSteps": [
+        "If Bluetooth pairing fails, reset the device and try again",
+        "For Wi-Fi issues, ensure your network supports 2.4GHz",
+        "Check that your device is within range of your router",
+        "Restart your device if connection problems persist",
+        "Contact support if you continue experiencing issues"
+      ],
       "quickStart": {
         "title": "🎯 Quick Start",
         "description": "Follow these 5 simple steps to get your air quality monitor up and running in under 30 minutes."
@@ -265,7 +296,64 @@
       "needHelp": {
         "title": "🆘 Need Help?",
         "description": "Contact our support team at support@airquality.com or call +1 (555) 123-4567"
-      }
+      },
+      "steps": [
+        {
+          "number": 1,
+          "title": "Choose Your Device",
+          "description": "Select the right air quality monitor for your needs",
+          "details": [
+            "AirSense Home: Perfect for apartments and small homes",
+            "AirPro Office: Ideal for offices and medium spaces", 
+            "AirMax Industrial: Best for factories and large facilities",
+            "AirGuard Portable: Great for monitoring on the go"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Installation",
+          "description": "Set up your device in the optimal location",
+          "details": [
+            "Place device 1.5-2 meters above ground level",
+            "Keep away from windows, doors, and air vents",
+            "Ensure good air circulation around the device",
+            "Avoid direct sunlight and heat sources"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Connect to WiFi",
+          "description": "Connect your device to your home network",
+          "details": [
+            "Download the AirQuality mobile app",
+            "Follow the in-app setup wizard",
+            "Enter your WiFi credentials",
+            "Wait for connection confirmation"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Calibration",
+          "description": "Calibrate your device for accurate readings",
+          "details": [
+            "Run initial calibration for 24 hours",
+            "Avoid moving device during calibration",
+            "Check readings against local air quality data",
+            "Fine-tune settings if needed"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Monitor & Maintain",
+          "description": "Keep your device running optimally",
+          "details": [
+            "Check readings daily via app or web dashboard",
+            "Clean sensors monthly with soft brush",
+            "Replace filters every 6 months",
+            "Update firmware regularly"
+          ]
+        }
+      ]
     },
     "notFound": {
       "title": "Page Not Found",

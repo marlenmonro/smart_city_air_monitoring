@@ -3,7 +3,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Map from './components/Map';
-import { ProductCard } from './components/ProductCardInline';
 import { useProducts } from './hooks/useData';
 import ScrollToTop from './components/ScrollToTop';
 import LanguageSwitcher from './components/LanguageSwitcher';
@@ -954,63 +953,12 @@ const ProductsPage: React.FC = () => {
 
 const GuidePage: React.FC = () => {
   const { t } = useTranslation();
-  const steps = [
-    {
-      number: 1,
-      title: "Choose Your Device",
-      description: "Select the right air quality monitor for your needs",
-      details: [
-        "AirSense Home: Perfect for apartments and small homes",
-        "AirPro Office: Ideal for offices and medium spaces", 
-        "AirMax Industrial: Best for factories and large facilities",
-        "AirGuard Portable: Great for monitoring on the go"
-      ]
-    },
-    {
-      number: 2,
-      title: "Installation",
-      description: "Set up your device in the optimal location",
-      details: [
-        "Place device 1.5-2 meters above ground level",
-        "Keep away from windows, doors, and air vents",
-        "Ensure good air circulation around the device",
-        "Avoid direct sunlight and heat sources"
-      ]
-    },
-    {
-      number: 3,
-      title: "Connect to WiFi",
-      description: "Connect your device to your home network",
-      details: [
-        "Download the AirQuality mobile app",
-        "Follow the in-app setup wizard",
-        "Enter your WiFi credentials",
-        "Wait for connection confirmation"
-      ]
-    },
-    {
-      number: 4,
-      title: "Calibration",
-      description: "Calibrate your device for accurate readings",
-      details: [
-        "Run initial calibration for 24 hours",
-        "Avoid moving device during calibration",
-        "Check readings against local air quality data",
-        "Fine-tune settings if needed"
-      ]
-    },
-    {
-      number: 5,
-      title: "Monitor & Maintain",
-      description: "Keep your device running optimally",
-      details: [
-        "Check readings daily via app or web dashboard",
-        "Clean sensors monthly with soft brush",
-        "Replace filters every 6 months",
-        "Update firmware regularly"
-      ]
-    }
-  ];
+  const steps = (t('pages.guide.steps', { returnObjects: true }) as Array<{
+    number: number;
+    title: string;
+    description: string;
+    details: string[];
+  }>) || [];
 
   return (
     <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto' }}>
@@ -1082,7 +1030,7 @@ const GuidePage: React.FC = () => {
               color: '#374151',
               lineHeight: '1.6'
             }}>
-              {step.details.map((detail, index) => (
+              {step.details.map((detail: string, index: number) => (
                 <li key={index} style={{ marginBottom: '0.5rem' }}>
                   {detail}
                 </li>
